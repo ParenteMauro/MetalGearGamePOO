@@ -23,13 +23,17 @@ public class MisionIntermedia extends Mision {
     
     @Override
     public void Iniciar() {
-
+        
+        
+        
+        
+        
     }
 
     public MisionIntermedia mision1() {
 
         return new MisionIntermedia("Hangar de entrada",0);
-
+        
     }
     
     public MisionIntermedia mision2(){
