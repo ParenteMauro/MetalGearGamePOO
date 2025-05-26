@@ -18,7 +18,8 @@ public class Juego {
         System.out.println("----------------------");
         System.out.println("--- Menu Principal ---");
         System.out.println("----------------------");
-
+        
+        
         do {
             
             System.out.println("-- 1. Iniciar Mision");
@@ -30,6 +31,10 @@ public class Juego {
             
             switch(opcion){
                 case 1:
+                    MisionIntermedia m1 = new MisionIntermedia("asd",0);
+                    m1.Iniciar();
+                    
+                    
                     break;
                 case 2:
                     break;

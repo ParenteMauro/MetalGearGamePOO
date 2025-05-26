@@ -1,6 +1,6 @@
 
 package metalgear;
 
-public interface Enemigo {
+public interface Enemigo  {
     
 }
