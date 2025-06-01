@@ -4,19 +4,47 @@ public class Celda {
 
     private Objeto objeto;
     private String vacio;
-    private Snake snake;
+    private Personaje personaje;
+    private Boolean exclusion;
 
     public Celda() {
 
-        this.vacio = " ";
+        this.vacio = ".";
+        this.exclusion = false;
     }
 
-    public Celda(Snake snake) {
-        this.snake = snake;
+    public Personaje crearSnake(Integer y, Integer x) {
+        return this.personaje = new Snake(y, x);
+
     }
 
-    public Celda(Objeto objeto) {
-        this.objeto = objeto;
+    public Personaje crearGuardia(Integer y, Integer x) {
+        return this.personaje = new Guardia(y, x);
+    }
+
+    public Objeto crearObjeto(String tipo) {
+
+        return this.objeto = new Objeto(tipo);
+
+    }
+
+    public Personaje getPersonaje() {
+        return personaje;
+    }
+
+    public void setPersonaje(Personaje personaje) {
+        this.personaje = personaje;
+    }
+
+    public Objeto getObjeto() {
+        return objeto;
+    }
+
+    public Boolean esZonaDeExclucion() {
+
+        this.vacio = "-";
+        return this.exclusion = true;
+
     }
 
     @Override
@@ -26,10 +54,10 @@ public class Celda {
 
             return this.objeto.toString();
 
-        } else if (this.snake != null) {
-            
-            return this.snake.toString();
-            
+        } else if (this.personaje != null) {
+
+            return this.personaje.toString();
+
         } else {
 
             return this.vacio;

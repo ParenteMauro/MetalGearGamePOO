@@ -13,6 +13,10 @@ public class Objeto {
         
     } 
 
+    public String getTipo() {
+        return tipo;
+    }
+    
     @Override
     public String toString() {
         return this.tipo;
